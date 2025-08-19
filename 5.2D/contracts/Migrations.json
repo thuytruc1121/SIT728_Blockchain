@@ -202,7 +202,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 167,
+                        "referencedDeclaration": 310,
                         "src": "158:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -286,7 +286,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 167,
+                        "referencedDeclaration": 310,
                         "src": "209:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -906,7 +906,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 167,
+                                  "referencedDeclaration": 310,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -997,7 +997,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 167,
+                                  "referencedDeclaration": 310,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1472,15 +1472,15 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
-    "5777": {
+    "1337": {
       "events": {},
       "links": {},
-      "address": "0xE032a7804786EE593E8C861A55415C3AaE377589",
-      "transactionHash": "0xd7ec51b35ef11cfbc9f7b5959e901fc21e541cc89e7ac2dcd582940ff722f79a"
+      "address": "0xFF0db6A0657F83553d898fDBC0D0B8b42F6c07c2",
+      "transactionHash": "0x7d4d93a26bda0c3b803ca0ec2184568349552cd6f2f783e72e507b4cc51484e6"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2025-08-18T00:48:51.997Z",
+  "updatedAt": "2025-08-19T02:23:47.106Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

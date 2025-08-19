@@ -1,0 +1,16 @@
+{
+    "server": {
+        "baseDir": [
+            "./src",
+            "./build/contracts"
+        ],
+        "routes": {
+            "/vendor": "./node_modules"
+        },
+        "port": 8454,
+        "open": true,
+        "files": [
+            "./src/**/*.{html,htm,css,js}"
+        ]
+    }
+}
