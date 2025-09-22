@@ -1,0 +1,23 @@
+{
+  "name": "food-supply-chain-dapp",
+  "version": "1.0.0",
+  "description": "Simple Food Supply Chain DApp",
+  "scripts": {
+    "dev": "lite-server",
+    "build": "truffle compile",
+    "migrate": "truffle migrate --reset",
+    "lint:sol": "npx solhint 'contracts/**/*.sol'",
+    "scan:audit": "npm audit --audit-level=moderate || true",
+    "scan:retire": "npx retire --path . --exitwith 10 || true",
+    "scan": "npm run lint:sol && npm run scan:audit && npm run scan:retire"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "retire": "^3.0.6",
+    "solhint": "^4.5.4"
+  },
+  "dependencies": {
+    "@truffle/contract": "^4.6.31",
+    "web3": "^1.10.0"
+  }
+}

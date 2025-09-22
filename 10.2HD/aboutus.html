@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>About Us · Food Supply Chain DApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container-page {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-top: 24px;
+            margin-bottom: 24px;
+            max-width: 1100px;
+        }
+
+        .page-header {
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 20px 20px 0 0;
+            padding: 20px 24px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+        }
+
+        h2.section-title {
+            margin-top: 1.75rem;
+            padding-top: .25rem;
+            border-top: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        .lead-desc {
+            font-size: 1.05rem;
+            color: #334155;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: .25rem .6rem;
+            border-radius: 9999px;
+            background: rgba(102, 126, 234, .15);
+            color: #4f46e5;
+            font-weight: 600;
+            font-size: .85rem;
+        }
+
+        .hero-card {
+            border: none;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+        }
+
+        .legend span {
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .lg-green {
+            color: #0f766e;
+        }
+
+        .lg-yellow {
+            color: #b45309;
+        }
+
+        .lg-red {
+            color: #b91c1c;
+        }
+
+        .lg-grey {
+            color: #475569;
+        }
+
+        .btn-gradient {
+            background: var(--success-gradient);
+            color: white;
+            border: none;
+            border-radius: 9999px;
+            padding: .5rem 1rem;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(17, 153, 142, .25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container container-page p-0">
+        <div class="page-header d-flex align-items-center justify-content-between">
+            <div>
+                <div class="pill mb-1">White Paper</div>
+                <h1 class="mb-0">Food Supply Chain DApp</h1>
+            </div>
+            <a href="index.html" class="btn btn-light"><i class="fas fa-arrow-left mr-2"></i>Back to App</a>
+        </div>
+
+        <div class="p-4 p-md-5">
+            <p class="lead lead-desc">
+                The <strong>Food Supply Chain DApp</strong> delivers transparent, real-time provenance for agricultural
+                produce as it moves from farms to stores. Each <em>batch</em> is registered on a blockchain ledger,
+                transferred only by authorised parties, verified for quality, and finally marked <em>Sold</em> by the
+                store. Immutable records and role–based controls reduce fraud, improve recall precision, and build
+                consumer trust. This white paper is written for managers, operators and auditors and outlines the
+                business problem, the implemented solution, the user journey, and day-to-day use of the system.
+            </p>
+
+            <h2 class="section-title" id="problem">The Problem We Solve</h2>
+            <p>Food supply chains are multi-party and data are often fragmented across spreadsheets, PDFs and
+                third-party systems. Two risks dominate:</p>
+            <ol class="pl-3">
+                <li><strong>Duplication and inconsistency of batch information.</strong> The same goods may be recorded
+                    under different identifiers at different warehouses, leading to accidental mismatches or deliberate
+                    substitution, and making recalls costly and slow.</li>
+                <li><strong>Authority misuse by intermediaries.</strong> Warehouses or brokers may perform actions
+                    beyond their remit (e.g., transferring goods or declaring them sale-ready) without proper oversight
+                    or traceability.</li>
+            </ol>
+            <p>Both issues undermine auditability and consumer confidence. A decentralised ledger provides a single,
+                authoritative record per batch and enforces permissions in code rather than relying on manual process
+                discipline.</p>
+
+            <h2 class="section-title" id="approach">Our Approach</h2>
+            <ul class="pl-3">
+                <li><strong>Blockchain ledger</strong> provides a single source of truth for every batch.</li>
+                <li><strong>Role-based custody</strong> (Farm → Warehouse → Store): only the <em>current holder</em> can
+                    transfer or update status.</li>
+                <li><strong>Quality integrity:</strong> condition can change <strong>only</strong> from <code>OK</code>
+                    to <code>Bad</code>; reversal is disallowed to prevent tampering.</li>
+                <li><strong>Finality:</strong> only a <em>Store</em> can mark a batch <em>Sold</em>, and only if it is
+                    both the current holder and at the correct lifecycle stage.</li>
+                <li><strong>Provenance proofs:</strong> optional QR/IPFS links attach certificates (lab reports, origin
+                    documents) to a batch without storing sensitive content on-chain.</li>
+            </ul>
+            <div class="card hero-card my-3">
+                <div class="card-body">
+                    <h6 class="mb-2">Supply flow</h6>
+                    <img src="food_supply.jpg" alt="Food supply flow" class="img-fluid rounded"
+                        onerror="this.onerror=null;this.src='food_supply.png'" />
+                </div>
+            </div>
+
+            <h2 class="section-title" id="stakeholders">Stakeholders and Benefits</h2>
+            <p><strong>Farms</strong> gain a trusted origin story and faster onboarding of buyers.
+                <strong>Warehouses</strong> receive clear custody logs and simpler audits. <strong>Stores</strong>
+                ensure only verified, “OK” goods are sold, reducing liability. <strong>Customers</strong> can scan a QR
+                code to verify the full journey (origin, stages, timestamps).
+            </p>
+
+            <h2 class="section-title" id="journey">How It Works (User Journey)</h2>
+            <h5 class="mt-3">1. Create a Batch (Farm)</h5>
+            <p>Enter <em>Batch name</em>, <em>Origin</em>, <em>Batch size</em>, <em>Expiry date</em>, and optional
+                <em>Certificate hash (QR/IPFS)</em>. Press <strong>Create</strong>; a new on-chain record is minted and
+                the farm becomes the first holder.
+            </p>
+            <h5>2. Transfer to Warehouse</h5>
+            <p>As the current holder, enter the warehouse address and press <strong>Transfer</strong>. The stage
+                auto-updates to <code>Warehoused</code> for authorised warehouse addresses.</p>
+            <h5>3. Transfer to Store</h5>
+            <p>The warehouse transfers custody to a store address; the stage auto-updates to <code>Store</code>.</p>
+            <h5>4. Quality Incident (if any)</h5>
+            <p>If an issue arises, the current holder may mark the batch as <code>Bad</code>. This decision is
+                <em>permanent</em>; the batch cannot be transferred or sold thereafter.
+            </p>
+            <h5>5. Mark as Sold (Store only)</h5>
+            <p>When ready for sale, the store—as current holder at stage <code>Store</code>—presses <strong>Mark as
+                    Sold</strong>. The lifecycle ends and the status is logged permanently.</p>
+            <div class="card hero-card my-3">
+                <div class="card-body">
+                    <h6 class="mb-2">Batch lifecycle</h6>
+                    <img src="batchlifecycle.jpg" alt="Batch lifecycle diagram" class="img-fluid rounded"
+                        onerror="this.onerror=null;this.src='batchlifecycle.png'" />
+                </div>
+            </div>
+
+            <div class="card hero-card my-4">
+                <div class="card-body">
+                    <h6 class="mb-2">UI colour cues</h6>
+                    <div class="legend small">
+                        <span class="lg-green"><i class="fas fa-square mr-1"></i>Green = owned by you</span>
+                        <span class="lg-yellow"><i class="fas fa-square mr-1"></i>Yellow = in transit</span>
+                        <span class="lg-red"><i class="fas fa-square mr-1"></i>Red = bad condition</span>
+                        <span class="lg-grey"><i class="fas fa-square mr-1"></i>Grey = sold</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" id="governance">Governance and Roles</h2>
+            <p>For the prototype, actors are statically authorised at deployment:</p>
+            <ul class="pl-3">
+                <li><strong>Warehouses:</strong> <code>0xB4F1A67fec31ff504Df0C64fE456B1F4f63165E0</code></li>
+                <li><strong>Stores:</strong> <code>0x0Aea37631823f63bE96694ba14fE7e0C5bd61E4A</code>,
+                    <code>0x745C9102C727ccf84159Cd5E193b32583BC371c5</code>
+                </li>
+            </ul>
+            <p>Future versions may replace static lists with governance to add or remove roles dynamically.</p>
+
+            <h2 class="section-title" id="privacy">Data Privacy and Compliance</h2>
+            <p>On-chain data are minimal (name, origin, counts, timestamps). Sensitive documents remain off-chain and
+                are referenced via QR/IPFS hashes under owner control. All state changes emit events, forming an
+                immutable, regulator-friendly audit trail.</p>
+
+            <h2 class="section-title" id="wiki">Using the App</h2>
+            <p>Connect MetaMask to the private chain; create a batch; click a row to open the modal; transfer only if
+                you are the holder; update condition only from <code>OK</code> to <code>Bad</code>; mark as sold only as
+                a Store at stage <code>Store</code>. The interface mirrors contract rules by disabling buttons when
+                actions would revert.</p>
+
+            <h2 class="section-title" id="risks">Risk Controls</h2>
+            <p><strong>Tamper-proof logs:</strong> actions are recorded immutably. <strong>Irreversible “Bad”:</strong>
+                prevents contaminated goods from re-entering circulation. <strong>Separation of duties:</strong> farms
+                cannot sell; warehouses cannot sell; stores can sell only at the correct stage. <strong>Time-bound
+                    checks:</strong> expiry visibility supports future automated policies.</p>
+
+            <div class="mt-4">
+                <a href="index.html" class="btn btn-gradient"><i class="fas fa-arrow-left mr-2"></i>Back to App</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
